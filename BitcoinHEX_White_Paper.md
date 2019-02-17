@@ -1,5 +1,5 @@
 <h1 align="center">
-  BitcoinHEX : the first certificate of deposit on the blockchain<br>
+  BitcoinHEX: The first certificate of deposit on the blockchain<br>
 </h1>
 
 <p align="center">
