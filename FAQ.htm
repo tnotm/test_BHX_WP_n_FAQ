@@ -1,0 +1,113 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.togglefaq').click(function (e) {
+            e.preventDefault();
+            var notthis = $('.active').not(this);
+            notthis.find('.fas fa-minus-square').addClass('fas fa-plus-square').removeClass('fas fa-minus-square');
+            notthis.toggleClass('active').next('.faqanswer').slideToggle(300);
+            $(this).toggleClass('active').next().slideToggle("fast");
+            $(this).children('i').toggleClass('fas fa-plus-square fas fa-minus-square');
+        });
+    });
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+.faqanswer {
+	display: none;
+	width: 590px;
+	background: #e5e5e5;
+	padding: 12px 20px 0 30px;	
+}
+
+.faqanswer p {
+	font-size: 13px;
+	line-height: 17px;	
+}
+
+
+a.active {
+	font-weight: bold;
+}
+
+.togglefaq {
+	text-decoration: none;
+	color: #333;
+	font-size: 13px;
+	padding: 10px 30px;
+	line-height: 20px;
+	display: block;
+	border: 1px solid #d0d0d0;
+	width: 590px;
+	margin-bottom: -1px;
+}
+.fas fa-plus-square {
+	color: #5ec4cd;
+	margin-right: 20px;
+	font-size: 20px;
+	float:left;
+}
+
+.fas fa-minus-square {
+	color: #5ec4cd;
+	margin-right: 20px;
+	font-size: 20px;
+	float:left;
+}
+p {
+  margin: 0;
+  padding-bottom: 20px;
+}
+</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<h1>BitcoinHEX FAQ</h1>
+<H3>Definitions</H3>
+<a href="#def-snapshot" class="togglefaq"><i class="fas fa-plus-square"></i> What is a snapshot?</a>
+          <div class="faqanswer">
+            <p>It's a record of the state of a blockchain at a single point in time. They are usually named at a "Block height." which means a specific position in time on a blockchain. The block number is the block height. BitcoinHEX uses a snapshot to record who on the Bitcoin Blockchain should be able to claim BitcoinHEX. 
+</p>
+   </div>
+   
+       <a href="#def-HEX" class="togglefaq"><i class="fas fa-plus-square"></i> What does the HEX in BitcoinHEX stand for? </a>
+          <div class="faqanswer">
+             <p>N1. Open Source 
+
+                2. Trustless 
+                
+                3. Store of Value 
+                
+                4. Censorship Resistant 
+                
+                5. Permissionless 
+                
+                6. Immutable 
+                
+                 
+                
+                BHX addresses are also hexidecimal. 
+</p>
+   </div>
+
+<h3>Claiming</h3>
+<a href="#claim-launch" class="togglefaq"><i class="fas fa-plus-square"></i> Why are you launching this?</a>
+          <div class="faqanswer">
+             <p> Bitcoin started the revolution in trustless, immutable, distributed peer to peer digital currency. It started worthless and over 10 years reached a value of $300 Billion USD. In 2019 it is used more as a store of value and speculative instrument than a currency.</p> 
+            
+                    <p>Bitcoin has only 3 main functions: Send, Receive, or Mine. If you want to earn interest on your holdings, you must entrust them to a centralized third party. These are security holes that are often hacked, destroy privacy, or introduce fees if you want to get your funds out. The parties are so important to users that the companies themselves have made more profit on Bitcoin than its founder.</p> 
+
+                            <p>BitcoinHEX adds a staking function which pays stakers instead of miners. This replaces these third parties with a trustless Peer-to-Peer to system. Instead of sending your BitcoinHEX to an exchange so they can lend it out on your behalf to earn interest for you, you just send it to the same Smart Contract that minted all the BitcoinHEX in the first place, and it credits you interest. If you're given programmable money, the first thing you should program is interest.</p>
+
+                                    <p>The Certificate of Deposit (CD) is one of the most popular banking products in existence. BitcoinHEX is the first CD on the blockchain. It's much better than a CD though, because a CD won't pay you more if others decide to close their CD's. BitcoinHEX does. If only 1% of coin holders stake, your ROI per a year as a staker exceeds 369%. If 10% Stake average ROI for stakers is 36.9%. If 20% stake average ROI for stakers is 18.45%. Instead of sending you money to a foreign mega-corp to buy mining equipment which shows up late, used, or never at all, you can skip the depreciating asset and electricity bills and just stake your coins.</p> 
+
+                                            <p>The longer you stake, the more bonus shares you get. ~20% bonus shares per extra year of stake commitment, payable on all stake lengths over 1 period.  </p>
+           
+                                                    <p>BitcoinHEX includes all of the features of Bitcoin (send, receive, earn) and adds Trustless Interest through staking, where longer stakes pay better than shorter.</p>
+   </div>    
+   
+           <a href="#claim-when" class="togglefaq"><i class="fas fa-plus-square"></i> When is the snapshot?</a>
+          <div class="faqanswer">
+             <p>1st Qtr of 2019
+</p>
+   </div>
