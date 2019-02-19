@@ -1,0 +1,156 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Open jQuery UI accordion panel via an external link / URL with hash</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"/>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+
+$(function() {
+
+	$("#accordion").accordion({
+		heightStyle:"content",
+		collapsible:true,
+		active:false,
+		icons:{"header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}
+	});
+	
+	// Begin script to open accordion panels via an external link with hash
+	// Position the script here
+	var hash = window.location.hash;
+    var anchorParent = '#'+($(hash).attr("parent"));
+    if (anchorParent !== '#undefined') {
+        var anchor = $('a[href$="'+anchorParent+'"]');
+        anchor.click();
+        console.log(anchor);
+    } else {
+	    var anchor = $('a[href$="'+hash+'"]');
+        anchor.click();
+        console.log(anchor);
+    }
+    console.log(hash);
+    console.log(anchor);
+    console.log(anchorParent);
+	//if (anchorParent.length > 0){
+	//	anchor.click();
+	//}
+    //if (subAnchor.length > 0){
+	//	subAnchor.click();
+	//}
+	// End
+
+});
+</script>
+<style>
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#container {
+	margin:20px auto;
+	padding:40px;
+	max-width:728px;
+	-moz-box-shadow:3px 3px 4px 4px #555;  
+	-webkit-box-shadow:3px 3px 4px 4px #555;
+	box-shadow:3px 3px 4px 4px #555;
+}
+#adds {
+	margin:20px 0;
+}
+h1 {
+	font-size:21px;
+	line-height:25px;
+	margin-bottom:5px;
+}
+h2 {
+	font-size:18px;
+	line-height:22px;
+	margin-bottom:0;
+}
+h3 {
+	font-size:14px;
+}
+p {
+	margin-top:0;
+	font-size:16px;
+	line-height:23px;
+}
+code {
+	font-size:17px;
+	line-height:25px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+  <div id="content">
+    <h1>Open jQuery UI accordion panel via an external link / URL with hash</h1>
+    <p>To open a jQuery UI panel accordion panel via an external link / URL with hash you need the following Javascript snippet.<br>
+    Put the following code within, but after the accordion code. See source code for full example.</p>
+    <code>
+      var hash = window.location.hash;<br>
+      var anchor = $('a[href$="'+hash+'"]');<br>
+      if (anchor.length > 0){<br>
+        anchor.click();<br>
+      }
+    </code>
+    <h2>Opening an accordion panel via an external URL is tested</h2>
+    <p>This solution is tested with jQuery 1.10.2, jQuery UI 1.11.0, Internet Explorer 11 (and compatibility Mode IE8, IE9, IE10), Firefox 30, Safari 5.1.7 (Win), Opera 22 and Chrome 36.</p>
+    <h2>Try it yourself to open an accordion panel via an external URL</h2>
+    <p><a href="http://0.0.0.0:8000/FAQ3.htm#1" title="Open accordion panel 1 via an external URL" target="_blank">Open accordion panel 1</a> accordion panel via an external URL.<br><br>
+    <a href="http://0.0.0.0:8000/FAQ3.htm#2" title="Open accordion panel 2 via an external URL" target="_blank">Open accordion panel 2</a> accordion panel via an external URL.<br><br>
+    <a href="http://0.0.0.0:8000/FAQ3.htm#3" title="Open accordion panel 3 via an external URL" target="_blank">Open accordion panel 3</a> accordion panel via an external URL.<br><br>
+    <a href="http://0.0.0.0:8000/FAQ3.htm#4" title="Open accordion panel 4 via an external URL" target="_blank">Open accordion panel 4</a> accordion panel via an external URL.</p>
+    <div id="adds"> 
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Open jQuery UI panel via external URL -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;max-width:728px;height:90px"
+           data-ad-client="ca-pub-9924236306896960"
+           data-ad-slot="8564905533"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div id="accordion">
+      <h3><a href="#general" id="general">Where have all the flowers gone?</a></h3>
+      <div>
+        <h3><a href="#have-you-ever" id="have-you-ever" parent="general">Have you ever?</a></h3>
+        <p>I have see the rain a few times... All ok.</p>
+      </div>
+      <h3><a href="#2" id="2">Have you ever seen the rain?</a></h3>
+      <div>
+        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+          purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+          velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+          suscipit faucibus urna.</p>
+      </div>
+      <h3><a href="#3" id="3">Section 3</a></h3>
+      <div>
+            <h3><a href="#my-time-is-good" id="my-time-is-good" parent="3">Have you ever?</a></h3>
+            <p>I have see the rain a few times... All ok.</p>
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3><a href="#4" id="4">Section 4</a></h3>
+      <div>
+        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+          et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+          mauris vel est.</p>
+        <p> Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+          inceptos himenaeos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
